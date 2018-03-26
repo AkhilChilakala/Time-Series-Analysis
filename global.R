@@ -1,0 +1,10 @@
+library(shiny)
+library(ggplot2)
+library(jsonlite)
+library(dplyr)
+library(zoo)
+library(forecast)
+data_df <- as.data.frame(fromJSON("http://geo.irceline.be/sos/api/v1/timeseries/10701/getData"))
+data_df$values.timestamp <- as.POSIXct(as.numeric(data_df$values.timestamp)/1000,origin="1970-01-01")
+data_df <- na.locf(zoo(data_df$values.value,data_df$values.timestamp))
+data_table <- NULL

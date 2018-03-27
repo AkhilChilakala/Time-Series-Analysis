@@ -8,10 +8,11 @@
  
  **The following set of analysis tasks can be done:**
  
- Basic Plot Visualization and Table View with Summary 
+ Basic plot visualization and table view with summary
  
- Auto Correlation Function and Partial Correlation Function with Box Test to check p value
+ Autocorrelation Function and Partial Correlation Function with Box Test to check p-value
  
  Simple Moving Average with changeable k value
  
- Forecasting with HoltWinters and Arima model and display of coefficients in arima model
+ Forecasting with Holt-Winters and ARIMA model and display of coefficients in ARIMA model.
+ Since analysis is needed to be done on some SOS instance if a wrong file or wrong API is chosen, it goes to a valid SOS by default.
